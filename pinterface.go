@@ -88,10 +88,25 @@ type IUserState interface {
 	// Related to the database backend
 	Users() IHashMap
 	Host() IHost
+	Creator() ICreator
 }
 
-// A Database file or host
+// Database host (or file)
 type IHost interface {
 	Ping() error
 	Close()
+}
+
+// Redis host
+type IRedisHost interface {
+	Pool()
+	DatabaseIndex()
+}
+
+// Can be used to create new data structures
+type ICreator interface {
+	NewList(id string) IList
+	NewSet(id string) ISet
+	NewHashMap(id string) IHashMap
+	NewKeyValue(id string) IKeyValue
 }
