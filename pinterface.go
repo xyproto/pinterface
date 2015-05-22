@@ -90,7 +90,7 @@ type IUserState interface {
 	Host() IHost
 }
 
-// A database host
+// A Database file or host
 type IHost interface {
 	Ping() error
 	Close()
