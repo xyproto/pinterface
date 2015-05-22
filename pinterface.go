@@ -110,3 +110,7 @@ type ICreator interface {
 	NewHashMap(id string) IHashMap
 	NewKeyValue(id string) IKeyValue
 }
+
+type IRedisCreator interface {
+	SelectDatabase(dbindex int)
+}
