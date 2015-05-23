@@ -107,7 +107,12 @@ type IRedisHost interface {
 	DatabaseIndex()
 }
 
-// Can be used to create new data structures
+// Redis data structure creator
+type IRedisCreator interface {
+	SelectDatabase(dbindex int)
+}
+
+// Data structure creator
 type ICreator interface {
 	NewList(id string) IList
 	NewSet(id string) ISet
@@ -115,6 +120,18 @@ type ICreator interface {
 	NewKeyValue(id string) IKeyValue
 }
 
-type IRedisCreator interface {
-	SelectDatabase(dbindex int)
+// Middleware for permissions
+type IPermissions interface {
+	SetDenyFunction(f http.HandlerFunc)
+	DenyFunction() http.HandlerFunc
+	UserState() IUserState
+	Clear()
+	AddAdminPath(prefix string)
+	AddUserPath(prefix string)
+	AddPublicPath(prefix string)
+	SetAdminPath(pathPrefixes []string)
+	SetUserPath(pathPrefixes []string)
+	SetPublicPath(pathPrefixes []string)
+	Rejected(w http.ResponseWriter, req *http.Request) bool
+	ServeHTTP(w http.ResponseWriter, req *http.Request, next http.HandlerFunc)
 }
