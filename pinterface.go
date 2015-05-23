@@ -2,6 +2,9 @@ package pinterface
 
 import "net/http"
 
+// Stable within the same version number
+const Version = 1.0
+
 // Database interfaces
 
 type IList interface {
