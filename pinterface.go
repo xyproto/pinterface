@@ -41,6 +41,7 @@ type IKeyValue interface {
 	Set(key, value string) error
 	Get(key string) (string, error)
 	Del(key string) error
+	Inc(key string) (string, error)
 	Remove() error
 	Clear() error
 }
