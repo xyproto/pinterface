@@ -123,7 +123,7 @@ type ICreator interface {
 type IPermissions interface {
 	SetDenyFunction(f http.HandlerFunc)
 	DenyFunction() http.HandlerFunc
-	UserState() (IUserState, error)
+	UserState() IUserState
 	Clear()
 	AddAdminPath(prefix string)
 	AddUserPath(prefix string)
