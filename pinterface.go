@@ -3,7 +3,7 @@ package pinterface
 import "net/http"
 
 // Stable within the same version number
-const Version = 1.0
+const Version = 2.0
 
 // Database interfaces
 
@@ -89,7 +89,6 @@ type IUserState interface {
 	SetMinimumConfirmationCodeLength(length int)
 	GenerateUniqueConfirmationCode() (string, error)
 
-	// Related to the database backend
 	Users() IHashMap
 	Host() IHost
 	Creator() ICreator
@@ -114,10 +113,10 @@ type IRedisCreator interface {
 
 // Data structure creator
 type ICreator interface {
-	NewList(id string) IList
-	NewSet(id string) ISet
-	NewHashMap(id string) IHashMap
-	NewKeyValue(id string) IKeyValue
+	NewList(id string) (IList, error)
+	NewSet(id string) (ISet, error)
+	NewHashMap(id string) (IHashMap, error)
+	NewKeyValue(id string) (IKeyValue, error)
 }
 
 // Middleware for permissions
