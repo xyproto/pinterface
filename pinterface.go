@@ -2,7 +2,7 @@ package pinterface
 
 import "net/http"
 
-// Stable within the same version number
+// Stable API within the same version number
 const Version = 2.0
 
 // Database interfaces
@@ -94,13 +94,21 @@ type IUserState interface {
 	Creator() ICreator
 }
 
+// Data structure creator
+type ICreator interface {
+	NewList(id string) (IList, error)
+	NewSet(id string) (ISet, error)
+	NewHashMap(id string) (IHashMap, error)
+	NewKeyValue(id string) (IKeyValue, error)
+}
+
 // Database host (or file)
 type IHost interface {
 	Ping() error
 	Close()
 }
 
-// Redis host
+// Redis host (implemented structures can also be an IHost, of course)
 type IRedisHost interface {
 	Pool()
 	DatabaseIndex()
@@ -109,14 +117,6 @@ type IRedisHost interface {
 // Redis data structure creator
 type IRedisCreator interface {
 	SelectDatabase(dbindex int)
-}
-
-// Data structure creator
-type ICreator interface {
-	NewList(id string) (IList, error)
-	NewSet(id string) (ISet, error)
-	NewHashMap(id string) (IHashMap, error)
-	NewKeyValue(id string) (IKeyValue, error)
 }
 
 // Middleware for permissions
