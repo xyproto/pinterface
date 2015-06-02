@@ -1,3 +1,4 @@
+// Package pinterface provides interface types for the xyproto/simple* and xyproto/permission* packages
 package pinterface
 
 import "net/http"
