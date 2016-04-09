@@ -82,6 +82,7 @@ type IUserState interface {
 	PasswordAlgo() string
 	SetPasswordAlgo(algorithm string) error
 	HashPassword(username, password string) string
+	SetPassword(username, password string)
 	CorrectPassword(username, password string) bool
 	AlreadyHasConfirmationCode(confirmationCode string) bool
 	FindUserByConfirmationCode(confirmationcode string) (string, error)
