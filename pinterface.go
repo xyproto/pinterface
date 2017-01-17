@@ -4,7 +4,7 @@ package pinterface
 import "net/http"
 
 // Stable API within the same version number
-const Version = 3.0
+const Version = 4.0
 
 // Database interfaces
 
