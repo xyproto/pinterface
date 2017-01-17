@@ -79,7 +79,7 @@ type IUserState interface {
 	Username(req *http.Request) string
 	CookieTimeout(username string) int64
 	SetCookieTimeout(cookieTime int64)
-	CookieSecret(username string) string
+	CookieSecret() string
 	SetCookieSecret(cookieSecret string)
 	PasswordAlgo() string
 	SetPasswordAlgo(algorithm string) error
