@@ -48,7 +48,7 @@ type IHashMap2 interface {
 	Del(key string) error
 	Empty() (bool, error)
 	Exists(owner string) (bool, error)
-	GetMap(owner string, keys []string) (string, error)
+	GetMap(owner string, keys []string) (map[string]string, error)
 	Get(owner, key string) (string, error)
 	Has(owner, key string) (bool, error)
 	Keys(owner string) ([]string, error)
