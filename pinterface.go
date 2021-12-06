@@ -54,7 +54,7 @@ type IHashMap2 interface {
 	Keys(owner string) ([]string, error)
 	Remove() error
 	SetLargeMap(all map[string]map[string]string) error
-	SetMap(owner, m map[string]string) error
+	SetMap(owner string, m map[string]string) error
 	Set(owner, key, value string) error
 }
 
