@@ -18,7 +18,8 @@ Interfaces for:
 Tag cleanup
 -----------
 
-* The `2.0` tag was removed, in favor of the `v1*` versioning scheme, which is better supported by the `go mod` command.
+* The `v1*` versioning scheme was put to use, since it is better supported by the `go mod` command.
+* But the `2.0` tag is kept, for backwards compatibility with existing packages, but updated to the latest version.
 
 General information
 -------------------
