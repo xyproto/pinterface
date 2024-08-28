@@ -15,6 +15,11 @@ Interfaces for:
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/go:github-xyproto-pinterface.svg)](https://repology.org/project/go:github-xyproto-pinterface/versions)
 
+Tag cleanup
+-----------
+
+* The `2.0` tag was removed, in favor of the `v1*` versioning scheme, which is better supported by the `go mod` command.
+
 General information
 -------------------
 
