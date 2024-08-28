@@ -19,7 +19,8 @@ Tag cleanup
 -----------
 
 * The `v1*` versioning scheme was put to use, since it is better supported by the `go mod` command.
-* But the `2.0` tag is kept, for backwards compatibility with existing packages, but updated to the latest version.
+* `v1.5.4` is the latest release.
+* However, the `2.0` was kept, for backwards compatibility with existing packages.
 
 General information
 -------------------
