@@ -15,6 +15,12 @@ Interfaces for:
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/go:github-xyproto-pinterface.svg)](https://repology.org/project/go:github-xyproto-pinterface/versions)
 
+Packaging
+---------
+
+* The latest release is the `v1.5.4` tag. The `v1*` versioning scheme was put to use since this is what `go mod` seems to prefer.
+* The `2.0` tag is kept so that existing packages don't break, though.
+
 General information
 -------------------
 
