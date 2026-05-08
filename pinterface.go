@@ -4,7 +4,7 @@ package pinterface
 import "net/http"
 
 // Version is the API version. The API is stable within the same major version number
-const Version = 5.5
+const Version = 6.0
 
 // Database interfaces
 

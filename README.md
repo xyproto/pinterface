@@ -18,11 +18,11 @@ Interfaces for:
 Packaging
 ---------
 
-* The latest release is the `v1.5.5` tag. The `v1*` versioning scheme was put to use since this is what `go mod` seems to prefer.
+* The latest release is the `v1.6.0` tag. The `v1*` versioning scheme was put to use since this is what `go mod` seems to prefer.
 
 General information
 -------------------
 
-* Version: 1.5.5 (The tag is `v1.5.5` to work better with `go mod`. The API has version `5.5`.)
+* Version: 1.6.0 (The tag is `v1.6.0` to work better with `go mod`. The API has version `6.0`.)
 * License: BSD-3
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
