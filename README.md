@@ -18,12 +18,12 @@ Interfaces for:
 Packaging
 ---------
 
-* The latest release is the `v2.1.0` tag. There were some issues with the old versioning scheme that has now been fixed (the `2.0` tag was removed).
-* The 2.1.0 version is now in the `v2` directory, per Go package convention.
+* The latest release is the `v2.1.1` tag. There were some issues with the old versioning scheme that has now been fixed (the `2.0` tag was removed).
+* The 2.1.1 version is now in the `v2` directory, per Go package convention.
 
 General information
 -------------------
 
-* Version: 2.1.0
+* Version: 2.1.1
 * License: BSD-3
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
